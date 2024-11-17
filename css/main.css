@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    
+}
+
+html {
+    min-height: 100vh;
+    background-image: url("../images/pics/music-arrangement-with-black-headphones-with-copy-space.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+}
+
+a {
+    text-shadow: 0px 0px 12px #ddd2db;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+a:hover {
+    opacity: 0.4;
+    transform: translateY(-10px);
+}
+
+button {
+    transition: all ease-in-out 0.5s;
+}
+
+header {
+    margin: 3rem 5rem;
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background: linear-gradient(0deg, rgba(210, 125, 195, 1) 0%, rgb(206, 176, 200) 20%, rgba(251, 239, 249, 1) 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    z-index: 10;
+    transition: all linear 0.5s;
+}
+
+.fas {
+    display: none;
+}
+
+.fas-open {
+    position: fixed;
+    top: 0rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10vh 0;
+    justify-content: space-around;
+    background: rgb(130, 24, 111);
+    background: linear-gradient(0deg, rgba(130, 24, 111, 1) 0%, rgb(63, 19, 56) 100%);
+    z-index: 10;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+}
+
+nav ul li .nav-img {
+    display: flex;
+    width: 100%;
+}
+
+.nav-img img {
+    width: 2rem;
+}
+
+nav ul li button {
+    background-color: transparent;
+    border: 4px solid rgb(153, 17, 153);
+    border-radius: 15px;
+}
+
+nav ul li button:hover {
+    border-color: blueviolet;
+}
+
+nav ul li button a {
+    color: rgb(219, 219, 219);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    display: block;
+}
+
+section {
+    margin: 0 5rem;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    margin: auto 5rem;
+    gap: 5rem;
+    height: 85vh;
+}
+
+    
+.modeld{
+    
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background: linear-gradient(0deg, rgba(210, 125, 195, 1) 0%, rgb(206, 176, 200) 20%, rgba(251, 239, 249, 1) 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5rem;
+}
+}
+
+.hero .action-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.hero .action-container h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background: linear-gradient(0deg, rgba(210, 125, 195, 1) 0%, rgb(206, 176, 200) 20%, rgba(251, 239, 249, 1) 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5rem;
+}
+
+.hero .action-container p {
+    font-size: 1.5rem;
+    color: rgb(219, 219, 219);
+    margin-bottom: 2rem;
+}
+
+.hero .action-container button {
+    align-self: flex-start;
+    background-color: rgb(153, 17, 153);
+    border-radius: 15px;
+    border: none;
+}
+
+.hero .action-container button:hover {
+    background: blueviolet;
+}
+
+.hero .action-container button a {
+    color: rgb(219, 219, 219);
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    display: block;
+    text-decoration: none;
+}
+
+.poster-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.hero .poster-container::before {
+    position: absolute;
+    content: "";
+    bottom: -1rem;
+    right: 10rem;
+    border-right: solid rgba(110, 99, 99, 0.13) 15rem;
+    -webkit-box-shadow: -14px 26px 41px 30px rgba(0, 0, 0, 0.356);
+    box-shadow: -14px 26px 41px 30px rgba(0, 0, 0, 0.349);
+    /*transform: rotate(5deg);*/
+}
+
+.hero .poster-container img {
+    width: 26rem;
+}
+
+@media screen and (min-width: 1550px) {
+    body {
+        max-width: 1550px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        margin: 3rem 2rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .fas {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: rgb(219, 219, 219);
+        z-index: 11;
+    }
+
+    .hero {
+        gap: 2rem;
+        margin: auto 2rem;
+    }
+
+    .hero .action-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .action-container p {
+        font-size: 1.2rem;
+    }
+
+    .hero .action-container a {
+        padding: 1rem 1.2rem;
+    }
+
+    .hero .poster-container img {
+        width: 20rem;
+    }
+
+    .hero .poster-container img {
+        width: 55vm;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 4em;
+        height: 105vh;
+    }
+    .hero .action-container, .hero .poster-container {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero .action-container h1 {
+        font-size: 2rem;
+    }
+
+    .hero .action-container button {
+        margin: 0 auto;
+    }
+
+    .hero .poster-container {
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .hero .poster-container::before {
+        border-width: 10rem;
+        right: unset;
+    }
+
+    .hero .poster-container::after {
+        right: unset;
+        padding: 10rem;
+        height: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 300px) {
+    .hero .poster-container img {
+        width: 55vm;
+    }
+}
+
+@keyframes headphones {
+    25% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero .poster-container img {
+    animation: headphones 3s linear infinite;
+}
+
+@keyframes headphone-shadow {
+    0% {
+        box-shadow: -14px 26px 41px 20px rgba(0, 0, 0, 0.349);
+    }
+    25% {
+        box-shadow: -14px 26px 41px 30px rgba(0, 0, 0, 0.349);
+    }
+    50% {
+        box-shadow: -14px 26px 41px 20px rgba(0, 0, 0, 0.349);
+    }
+    75% {
+        box-shadow: -14px 26px 41px 10px rgba(0, 0, 0, 0.349);
+    }
+    100% {
+        box-shadow: -14px 26px 41px 20px rgba(0, 0, 0, 0.349);
+    }
+}
+
+.img-container::before {
+    animation: headphone-shadow 3s infinite linear;
+}
+
+@keyframes logo {
+    0% {
+        text-shadow: 0px 0px 12px #ddd2db;
+    }
+    30% {
+        text-shadow: 0px 0px 100px #ddd2db;
+    }
+    60% {
+        text-shadow: 0px 0px 20px #d465c0;
+    }
+    100% {
+        text-shadow: 0px 0px 20px #ddd2db;
+    }
+}
+
+.logo a {
+    animation: logo 3s infinite linear;
+}
+
+@keyframes fasopen {
+    from {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fas-open {
+    animation: fasopen 0.5s ease-in;
+}
+
+#container3D {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    height: 60vh;
+    /*padding: 2rem;
+    background: rgba(255, 255, 255, 0.05); */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+    backdrop-filter: blur(10px); 
+   /* border: 2px solid rgba(255, 255, 255, 0.2);*/
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#container3D:hover {
+    /*transform: perspective(1000px) rotateX(10deg) rotateY(-10deg); */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+#container3D canvas {
+    /*max-width: 100%;*/ 
+    width: 100%;
+    height: 100%;
+}
