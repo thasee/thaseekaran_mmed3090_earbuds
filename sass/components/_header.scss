@@ -1,0 +1,39 @@
+#header {
+    background-color:rgb(3, 3, 3);
+    position: fixed;
+    top:0;
+    margin:0;
+    padding:10px; 
+    left: 0;
+    right: 0;
+    margin-bottom: 100px;
+    z-index:1;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: right;
+        margin-right: 80px;
+    }
+
+    ul li {
+        margin-right: 20px;
+    }
+
+    ul li:last-child {
+        margin-right: 0px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 18px;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    ul li a:hover {
+        transform: scale(1.2);
+    }
+}
