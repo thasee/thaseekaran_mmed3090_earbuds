@@ -6,60 +6,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+  <link href="css/main.css" rel="stylesheet" />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
     crossorigin="anonymous"
   />
-  <link rel="stylesheet" href="./css/main.css" />
+  
   <title>HeadPhone</title>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="">EARBUDS</a>
-    </div>
 
-    <nav>
-      <i class="fas fa-bars"></i>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Categories</a></li>
-        <li><a href="">Pricing</a></li>
-        <li><a href="">Sign In</a></li>
-        <li><a class="nav-img"><img src="./images/icons/loupe.svg" /></a></li>
-        <li><a class="nav-img"><img src="./images/icons/shopping-cart.svg" /></a></li>
-        <li><button><a href="">Sign Up</a></button></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="hero-img">
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-container">
+          <!-- Logo Section -->
+          <div class="logo">
+              <a href="/">EARBUDS</a>
+          </div>
+  
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+              <span class="menu-icon"></span>
+          </button>
+  
+          <!-- Navigation Items -->
+          <div class="nav-content">
+              <ul class="nav-list">
+                  <li class="nav-item">
+                      <a href="/" class="nav-link" aria-current="page">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/categories" class="nav-link">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="/pricing" class="nav-link">Pricing</a>
+                  </li>
+              </ul>
+  
+              <div class="nav-actions">
+                  <a href="/signin" class="nav-link">Sign In</a>
+                  <button class="nav-button search-button" aria-label="Search">
+                      <img src="./images/icons/loupe.svg" alt="" aria-hidden="true">
+                  </button>
+                  <button class="nav-button cart-button" aria-label="Shopping cart">
+                      <img src="./images/icons/shopping-cart.svg" alt="" aria-hidden="true">
+                  </button>
+                  <a href="/signup" class="signup-button">Sign Up</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  
 
-  <section class="hero">
-    <div class="action-container">
-      <h1>Enjoy Music Like Never Before</h1>
-      <p>Experience the thrill of music like never before.</p>
-      <button><a href="#shopNow">Shop Now</a></button>
-    </div>
-    <div class="poster-container">
-      <img src="images/pics/poster.webp" alt="">
-    </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navContent = document.querySelector('.nav-content');
+        const body = document.body;
+    
+        mobileMenuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            navContent.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (!isExpanded) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        });
+    
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav-link, .signup-button');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                navContent.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+    });
+    </script>
+  
+
+    <section class="hero">
+      <div class="action-container">
+        <h1>Immerse Yourself in Pure Sound</h1>
+        <p>Where innovation meets audiophile excellence. Experience sound in its purest form.</p>
+        <button><a href="#shopNow">Discover Now</a></button>
+      </div>
+      <div class="poster-container">
+        <img src="images/pics/poster.webp" alt="Premium wireless earbuds">
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <h1 class="modeld"><center>EXPERIENCE THE PERFECTION</center></h1>
   </section>
-
   <section>
     <div class="img-container" id="shopNow">
       <center><div id="container3D"></div></center>
     </div>
   </section>
-  <section>
+
+
+
+
+<!--  xray-->
+
+<section id="xray-con">
+  <h2 class="hidden">Engineering Excellence</h2>
+
+  <section class="grid-con">
+    <div class="xray-text col-span-full m-col-start-3 m-col-end-11">
+      <h3>Marvel at Engineering Brilliance</h3>
+      <p>Explore the cutting-edge technology within our SonicWave earbuds. Slide to unveil the revolutionary components that deliver crystal-clear sound, supreme comfort, and unmatched durability. Each layer tells a story of acoustic excellence.</p>
+    </div>
     
-      <h1 class="modeld"><center>LIVE EXPERIENCE</center> </h1>
-      
+    <div class="col-span-full m-col-start-2 m-col-end-12">
+      <div id="comparison-con">
+        <div id="xray">
+          <div id="divisor"></div>
+        </div>
+        <input type="range" min="0" max="100" value="50" id="slider">
+      </div>
+    </div>
   </section>
+</section>
+
+
+<!--  xray-->
+
+<section id="scroll-con">
+  <h2 class="hidden">Premium Components</h2>
+
+  <section class="grid-con">
+    <div class="scroll-text col-span-full m-col-start-2 m-col-end-12">
+      <h3>Crafted for Acoustic Excellence</h3>
+      <p>
+        Journey inside the SonicWave's revolutionary design. Every component is meticulously engineered to deliver an audio experience that transcends ordinary listening. Discover how precision meets passion in every detail.
+      </p>
+    </div>
+  
+    <div class="scroll-text col-span-full m-col-start-2 m-col-end-12">
+      <h3>Built for Life's Adventures</h3>
+      <p>
+        Aerospace-grade materials meet elegant design in our most resilient earbuds yet. Weather-resistant, shock-proof, and engineered for endless comfort – SonicWave adapts to your lifestyle while maintaining pristine sound quality.
+      </p>
+    </div>
+
+    <div class="scroll-text col-span-full m-col-start-2 m-col-end-12">
+      <h3>Studio-Grade Sound Architecture</h3>
+      <p>
+        At the heart of SonicWave lies our proprietary acoustic driver, delivering thunderous bass, crystalline highs, and vocals so clear you'll feel the artist's presence. Experience your music in stunning high-fidelity detail.
+      </p>
+    </div>
+  
+    <div class="scroll-text col-span-full m-col-start-2 m-col-end-12">
+      <h3>Intelligent Connectivity</h3>
+      <p>
+        Equipped with advanced Bluetooth 5.2 technology, SonicWave ensures lightning-fast pairing and rock-solid connections. Enjoy zero-lag gaming, seamless calls, and uninterrupted audio streaming across all your devices.
+      </p>
+    </div>
+  
+      <div class="col-span-full">
+        <canvas id="explode-view"></canvas> 
+      </div>
+    </section>
+  </section>
+
+
+  <script
+  type="module"
+  src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   <script type="module" src="js/main.js"></script> 
+  <script  src="js/xray.js"></script> 
 </body>
 </html>
