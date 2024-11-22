@@ -746,3 +746,105 @@ section {
     animation: cardEntrance 0.8s ease-out forwards;
 }
 
+@media (max-width: 1200px) {
+    .scroll-item {
+        min-width: 280px;
+    }
+
+    .xray-text h2 {
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .scroll-con {
+        padding: 3rem 0;
+    }
+
+    .xray-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .xray-text {
+        /*padding-right: 0;*/
+        text-align: center;
+    }
+
+    .xray-images {
+        padding-top: 75%; /* 4:3 Aspect ratio for better viewing on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-wrapper,
+    .xray-wrapper {
+        padding: 0 1rem;
+    }
+
+    .scroll-item {
+        min-width: 260px;
+    }
+
+    .scroll-img {
+        height: 250px;
+    }
+
+    .scroll-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .xray-con {
+        padding: 4rem 0;
+    }
+
+    .xray-text h2 {
+        font-size: 2rem;
+    }
+
+    .xray-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .scroll-con {
+        padding: 1rem 0;
+    }
+
+    .scroll-item {
+        min-width: 220px;
+    }
+
+    .scroll-img {
+        height: 200px;
+    }
+
+    .xray-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .xray-text h3 {
+        font-size: 1.5 rem;
+    }
+
+    .xray-images {
+        padding-top: 100%; /* Back to 1:1 for mobile */
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .scroll-item:hover {
+        transform: none;
+    }
+
+    .xray-images .xray-view {
+        opacity: 0;
+    }
+
+    .xray-images.active .xray-view {
+        opacity: 1;
+    }
+}
